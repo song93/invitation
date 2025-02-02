@@ -1,0 +1,63 @@
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px; /* 3D 효과 */
+    cursor: pointer;
+  }
+  
+  /* 클릭 문구 스타일 */
+  .click-text {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 10px;
+    z-index: 2;
+  }
+  
+  /* 초대장 내용 (처음에는 숨김) */
+  .content {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    opacity: 0;
+    z-index: 0; /* 문 뒤에 위치 */
+  }
+  
+  /* 문 스타일 */
+  .door {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-size: cover; /* 이미지 크기 맞추기 */
+    background-position: center; /* 이미지 가운데 정렬 */
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+  
+  /* 왼쪽 문 */
+  .left {
+    left: 0;
+    transform-origin: left center; /* 왼쪽 문 회전축 */
+    border-right: 3px solid #999;
+    background-image: url('./images/leftdoor2.png'); /* 왼쪽 문 이미지 */
+  }
+  
+  /* 오른쪽 문 */
+  .right {
+    right: 0;
+    transform-origin: right center; /* 오른쪽 문 회전축 */
+    border-left: 3px solid #999;
+    background-image: url('./images/rightdoor2.png'); /* 오른쪽 문 이미지 */
+  }
+  
